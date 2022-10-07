@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfinder</title>
+    <link rel="stylesheet" href="/css/Page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        h1{
+            margin-left:13cm ;
+            color:black;
+            font-weight: bolder;
+            font-size: 50px;
+            text-decoration: underline;
+        }        
+        .quoi_question {
+    margin-left: 13cm;
+    padding: 0px 0px 5px 0px;
+    display: inline-block;
+    cursor: pointer;
+}
+ 
+.quoi_answer_container {
+    height: 0px;
+    overflow: hidden;
+    padding: 0px;
+    
+}
+
+.quoi{
+padding: 0.8cm;
+}
+
+.quoi_answer{
+    height: 230px;
+    font-size: 20px;
+}
+    </style>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <!-- Entete-------------------------------------------------------------------------------------------------------------------- -->
+    <img style="width: 100%;" src="/images/header2.png" alt="toplogo">
+	<header> 
+        <div>
+            <ul class="navigation">
+                <li><a href="/html/Modules.html">Les Modules</a></li>
+                <li><a href="/html/Planete.html">La Planete</a></li>
+                <li><a href="/html/Races.html">Les Races</a></li>
+                <li><a href="/html/Classe.html">Les Classes</a></li>
+                <li><a href="/index.html">Accueil</a></li>
+            </ul>              
+        </div>
+
+    <audio id= "audio1" controls="controls" onloadeddata="setHalfVolume()">
+        <source src="Audio\Trame2.mp3"  type="audio/mp3">
+    </audio>
+    </header>
+    <br> <br>
+    <!-- fin de l Entete-------------------------------------------------------------------------------------------------------------- -->
+
+
+    <script>
+        $(document).ready(function() {
+
+           $('.quoi_question').click(function() {
+
+               if ($(this).parent().is('.open')){
+                   $(this).closest('.quoi').find('.quoi_answer_container').animate({'height':'0'},1000);
+                   $(this).closest('.quoi').removeClass('open');
+
+                   }else{
+                       var newHeight =$(this).closest('.quoi').find('.quoi_answer').height() +'px';
+                       $(this).closest('.quoi').find('.quoi_answer_container').animate({'height':newHeight},1200);
+                       $(this).closest('.quoi').addClass('open');
+                   }
+           });
+       });
+       </script>
+
+
+    <br>
+    <img style="width: 700px;margin-left: 30%; border-radius: 1cm;" src="/images/index/Pathfinder.png" alt="PathLogo">
+    <br>
+    <div class="quoi_container">
+        <div class="quoi">
+           <div class="quoi_question"><img style="width: 480px;margin-left: 50%;" src="/images/index/quoi.png"></div>
+                <div class="quoi_answer_container">
+                   <div class="quoi_answer"><p>Pathfinder est un RPG (roleplaying game) fantastique riche et complexe qui utilise le même ensemble de règles d20 <br>au cœur de 
+                    Dungeons & Dragons. Les joueurs jouent le rôle d'aventuriers héroïques, souvent des explorateurs et des <br>érudits employés 
+                    par la Pathfinder Society, qui parcourent le monde pour résoudre des problèmes, résoudre des mystères <br>et collecter des trésors. 
+                    Les personnages sont hautement personnalisables et deviennent plus complexes au fur et à mesure <br>que vous jouez, présentant 
+                    aux joueurs des défis croissants car ils doivent trouver les meilleures façons d'utiliser leurs <br>capacités pour combattre des 
+                    ennemis de plus en plus puissants. </p></div>
+                </div>
+         </div>
+
+    <br>
+     <img style="width: 300x;margin-left: 30%" src="/images/index/manuel.png" alt="manuel">
+     <img style="width: 300x;margin-left: 1cm" src="/images/index/d20.png" alt="d20">
+  <br>
+  <br>
+    <iframe style="width:900px ;height: 615px; margin-left: 26%;;border-radius:2cm" onloadeddata="sethalfvolume(0.1)" controls 
+     src="https://www.youtube.com/embed/xC4x3ycrzbQ?start=40" title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+
+
+
+
+
+
+
+
+
+     <!-- Pied_de_page -------------------------------------------------------------------------------------------------------------------- -->
+     <br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
+
+        <div>
+
+            <a href="/html/Plan.html"  class="plan" >Plan du Site</a>
+            
+            <ul style="margin-right: 18%;" class="navigation2">
+                <li><a href="../html/Propos.html">A propos</a></li>
+                 <li><a href="../html/FAQ.html">FAQ</a></li>
+                 <li><a href="../html/Interets.html">Sites d'intérets</a></li>
+                 </ul>
+            <ul style="position:relative ;top:-80px;right: 2%" class="Social">
+                <a href="https://www.facebook.com/profile.php?id=100083165210055" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/RobertMaurice23" target="_blank" class="fa fa-twitter"></a>
+                <a href="https://www.linkedin.com/in/robert-maurice-29835b245" target="_blank" class="fa fa-linkedin"></a>
+                <a href="mailto: mauriceb@csdmedu.ca" target="_blank" class="fa fa-google"></a>
+            </ul>      
+            <p style="position:relative ;top:1px;right:-1600px">Contactez-Nous! </p>        
+        </div>
+        <br><br><br><br>
+        <p style="position:relative ;top:-80px;right:-200px">Site compatible sur Chrome, Opéra, Safari, Edge et FireFox</p>
+    </footer>
+    <!-- Pied_de_Page_Fin-------------------------------------------------------------------------------------------------------------------- -->
+</body>
+
+
+</html>
